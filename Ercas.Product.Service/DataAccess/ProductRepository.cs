@@ -20,6 +20,7 @@ namespace Ercas.Product.Service.DataAccess
 
         public async Task<CustomerProduct> Add(CustomerProduct product)
         {
+
             await context.CustomerProducts.AddAsync(product);
             await context.SaveChangesAsync();
             return product;

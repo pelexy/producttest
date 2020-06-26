@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Ercas.Product.Service.Domain.BaseEntities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Ercas.Product.Service.Domain.Models
 {
-    public class CustomerProduct
+    public class CustomerProduct:BaseEntity
     {    
 
         public int Id { get; private set; }
@@ -17,7 +18,7 @@ namespace Ercas.Product.Service.Domain.Models
         private CustomerProduct()
         { }
 
-        private CustomerProduct(string name, string description, decimal price)
+        public CustomerProduct(string name, string description, decimal price)
         {
             Name = name;
             Description = description;
